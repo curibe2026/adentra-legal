@@ -780,3 +780,7 @@ footer{
     background-size:270px auto;
   }
 }
+/* Ocultar únicamente el botón Hablemos de la primera pantalla */
+.hero-content .primary-button {
+  display: none;
+}
