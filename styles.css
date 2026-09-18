@@ -722,41 +722,39 @@ footer{
 }/* =========================
    AJUSTES FINALES ADENTRA
    ========================= */
-
 /* =========================
    AJUSTES FINALES ADENTRA
    ========================= */
 
-/* 1. Retirar el logo del encabezado */
+/* 1. Ocultar el logo superior,
+   pero conservar su espacio para que el menú no se mueva */
 .header .logo{
-  display:none;
+  visibility:hidden;
 }
 
 
-/* 2. Reemplazar la fotografía principal por el logo de Adentra */
+/* 2. Espacio derecho del Hero:
+   reemplazar la fotografía por el logo de Adentra */
 .hero-image{
   background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   position:relative;
   overflow:hidden;
 }
 
 
-/* Ocultar completamente la fotografía */
+/* Ocultar la fotografía original */
 .hero-image > img{
   display:none;
 }
 
 
-/* Ocultar el texto que estaba sobre la fotografía */
+/* Ocultar el texto sobre la fotografía */
 .hero-image .image-label{
   display:none;
 }
 
 
-/* Mostrar el logo original, sin modificarlo */
+/* Mostrar el logo original de Adentra */
 .hero-image::before{
   content:"";
   position:absolute;
@@ -764,21 +762,21 @@ footer{
   background-image:url("assets/logo-adentra.png");
   background-repeat:no-repeat;
   background-position:center center;
-  background-size:560px auto;
+  background-size:410px auto;
 }
 
 
-/* Ajuste para pantallas más pequeñas */
+/* Pantallas medianas */
 @media (max-width:900px){
   .hero-image::before{
-    background-size:430px auto;
+    background-size:340px auto;
   }
 }
 
 
-/* Ajuste para celulares */
+/* Celulares */
 @media (max-width:600px){
   .hero-image::before{
-    background-size:300px auto;
+    background-size:270px auto;
   }
 }
