@@ -276,7 +276,14 @@ button{
   font-size:14px;
   line-height:1.55;
 }
+.section-top > div{
+  flex:0 0 34%;
+}
 
+.section-top > p{
+  flex:1;
+  margin-left:5%;
+}
 .service-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
