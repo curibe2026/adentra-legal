@@ -1027,3 +1027,256 @@ footer p:last-child{
     margin-left:0;
   }
 }
+/* =========================================================
+   ADENTRA LEGAL — AJUSTE VISUAL
+   Formas alineadas con el lenguaje gráfico del brochure
+   ========================================================= */
+
+/* ---------- LOGO ---------- */
+
+.header-logo img {
+  width: 175px !important;
+  max-width: none !important;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+footer img {
+  width: 145px !important;
+  max-width: none !important;
+}
+
+
+/* ---------- LENGUAJE GRÁFICO: C + PUNTO ---------- */
+
+.brand-ring,
+.service-symbol,
+.step-symbol .brand-ring,
+.art-ring-2 {
+  border-radius: 50% !important;
+}
+
+
+/* C abierta: eliminamos una parte del círculo */
+.brand-ring {
+  border: 7px solid #a7a7ad !important;
+  border-right-color: transparent !important;
+  transform: rotate(-35deg);
+}
+
+
+/* Punto característico del logo */
+.brand-dot {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(
+    135deg,
+    #ed008c 0%,
+    #c400a8 45%,
+    #4317ca 100%
+  ) !important;
+}
+
+
+/* ---------- FORMAS DE SERVICIOS ---------- */
+
+.service-symbol {
+  position: relative !important;
+  width: 78px !important;
+  height: 78px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+
+/* La C */
+.service-symbol::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 7px solid #a7a7ad;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+
+
+/* El punto */
+.service-symbol span {
+  position: absolute !important;
+  width: 38px !important;
+  height: 38px !important;
+  right: 3px !important;
+  top: 20px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(
+    135deg,
+    #ed008c 0%,
+    #c400a8 45%,
+    #4317ca 100%
+  ) !important;
+}
+
+
+/* Variación magenta */
+.s-magenta::before {
+  border-color: #a7a7ad;
+  border-right-color: transparent;
+}
+
+
+/* Variación púrpura */
+.s-purple::before {
+  border-color: #77777d;
+  border-right-color: transparent;
+}
+
+
+/* Variación doble — como el tercer símbolo del brochure */
+.s-double::before {
+  border-color: #77777d;
+  border-right-color: transparent;
+}
+
+.s-double::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 7px solid transparent;
+  border-top-color: #ed008c;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+
+
+/* ---------- SÍMBOLOS DE LA SECCIÓN MÉTODO ---------- */
+
+.step-symbol {
+  position: relative !important;
+  width: 86px !important;
+  height: 86px !important;
+  flex-shrink: 0;
+}
+
+.step-symbol .brand-ring {
+  position: absolute !important;
+  inset: 4px !important;
+  width: auto !important;
+  height: auto !important;
+  border: 7px solid #77777d !important;
+  border-right-color: transparent !important;
+}
+
+.step-symbol .brand-dot {
+  position: absolute !important;
+  width: 40px !important;
+  height: 40px !important;
+  right: 3px !important;
+  top: 23px !important;
+}
+
+
+/* Tercer símbolo: C + magenta + púrpura */
+.step-symbol.triple .outer {
+  border-color: #ed008c !important;
+  border-right-color: transparent !important;
+}
+
+.step-symbol.triple .inner {
+  inset: 11px !important;
+  border-color: #77777d !important;
+  border-right-color: transparent !important;
+  transform: rotate(-35deg);
+}
+
+.step-symbol.triple .brand-dot {
+  z-index: 5;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero-art .ring-large,
+.hero-art .ring-small {
+  border: 7px solid rgba(255,255,255,.75) !important;
+  border-right-color: transparent !important;
+  border-radius: 50% !important;
+  transform: rotate(-35deg);
+}
+
+.hero-art .dot-large,
+.hero-art .dot-small {
+  border-radius: 50% !important;
+  background: linear-gradient(
+    135deg,
+    #ed008c 0%,
+    #c400a8 45%,
+    #4317ca 100%
+  ) !important;
+}
+
+
+/* ---------- EXPERIENCE ---------- */
+
+.art-circle {
+  border: 9px solid #171717 !important;
+  border-right-color: transparent !important;
+  border-radius: 50% !important;
+  transform: rotate(-35deg);
+}
+
+.art-dot {
+  border-radius: 50% !important;
+  background: linear-gradient(
+    135deg,
+    #ed008c 0%,
+    #c400a8 45%,
+    #4317ca 100%
+  ) !important;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+  .header-logo img {
+    width: 145px !important;
+  }
+
+  .service-symbol {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .service-symbol span {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header-logo img {
+    width: 125px !important;
+  }
+
+  .service-symbol {
+    width: 62px !important;
+    height: 62px !important;
+  }
+
+  .service-symbol span {
+    width: 32px !important;
+    height: 32px !important;
+    right: 0 !important;
+    top: 16px !important;
+  }
+
+}
